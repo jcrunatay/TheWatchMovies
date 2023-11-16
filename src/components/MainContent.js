@@ -214,6 +214,8 @@ export default function Main(props){
                     openModal={openModal}
                     fetchMoviesById={fetchMoviesById}
                     playTrailer={playTrailer}
+                    saveMovieIdToLocalStorage={saveMovieIdToLocalStorage}
+                    likedMoviesId={likedMoviesId}
                     /> 
                 </div>
             }
