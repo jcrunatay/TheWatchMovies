@@ -17,7 +17,8 @@ function SearchMovies(props) {
                     openModal={props.openModal}
                     fetchMoviesById={props.fetchMoviesById}
                     playTrailer={props.playTrailer}
-
+                    saveMovieIdToLocalStorage={props.saveMovieIdToLocalStorage}
+                    likedMoviesId={props.likedMoviesId}
                 />
     })
 
