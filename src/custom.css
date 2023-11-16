@@ -1,0 +1,13 @@
+.slider-button{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+
+@media (min-width: 768px) {
+    .slider-parent:hover .slider-button{
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
