@@ -26,4 +26,4 @@ TheWatchMovies is an app where users can watch their favorite movie(trailer) and
 
 ![TheWatchMovies](https://github.com/jcrunatay/movie_app/blob/main/public/image/movie_app_mobie_img1.png "TheWatchMovies Mobile Project Output")
 
-![TheWatchMovies](https://github.com/jcrunatay/movie_app/blob/main/public/image/movie_app_mobie__img2.png "TheWatchMovies Mobile Project Output")
+![TheWatchMovies](https://github.com/jcrunatay/movie_app/blob/main/public/image/movie_app_mobie_img2.png "TheWatchMovies Mobile Project Output")
