@@ -41,7 +41,7 @@ export default function MyModal(props) {
     };
 
     let genres = (props.currentSelectedMovie.genres ? props.currentSelectedMovie.genres.map(genre => ` ${genre.name} `) : "");
-    let editGenres = (props.currentSelectedMovie.genres ? genres.map(genre => <button key={genre} className='pointer-events-none border-0 outline-none bg-[#DA4167] px-5 py-3 mr-2 rounded-md'>{genre}</button> ) : "" )
+    let editGenres = (props.currentSelectedMovie.genres ? genres.map(genre => <button key={genre} className='mb-3 pointer-events-none border-0 outline-none bg-[#DA4167] px-5 py-3 mr-2 rounded-md'>{genre}</button> ) : "" )
     let year = (props.currentSelectedMovie.release_date ? new Date(props.currentSelectedMovie.release_date).getFullYear() : "");
 
 
@@ -120,7 +120,7 @@ export default function MyModal(props) {
                     <p className='mb-3 border-2 border-[#DA4167] p-3 rounded-md'>{props.currentSelectedMovie.overview}</p>
                 </div>
                 <div>
-                    <p className='mb-3 text-center'><span className='font-thin text-xs'></span>{editGenres}</p>
+                    <p className='mb-3 text-center'>{editGenres}</p>
                 </div>
                 <div className='px-5'>
                     <Slider {...settings}>
