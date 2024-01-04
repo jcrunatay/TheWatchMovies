@@ -26,7 +26,7 @@ export default function MyModal(props) {
     };
 
     
-    let slidesToScrollAndShow = 2;
+    let slidesToScrollAndShow = 3;
     
     if (props.screenSize >= 640 ){
         slidesToScrollAndShow = 4;
@@ -41,7 +41,7 @@ export default function MyModal(props) {
     };
 
     let genres = (props.currentSelectedMovie.genres ? props.currentSelectedMovie.genres.map(genre => ` ${genre.name} `) : "");
-    let editGenres = (props.currentSelectedMovie.genres ? genres.map(genre => <button key={genre} className='mb-3 pointer-events-none border-0 outline-none bg-[#DA4167] px-5 py-3 mr-2 rounded-md'>{genre}</button> ) : "" )
+    let editGenres = (props.currentSelectedMovie.genres ? genres.map(genre => <button key={genre} className='mb-3 pointer-events-none border-0 outline-none bg-[#DA4167] text-xs px-3 py-1 mr-2 rounded-sm sm:text-sm sm:px-5 sm:py-3 sm:rounded-md'>{genre}</button> ) : "" )
     let year = (props.currentSelectedMovie.release_date ? new Date(props.currentSelectedMovie.release_date).getFullYear() : "");
 
 
@@ -58,7 +58,6 @@ export default function MyModal(props) {
     }
 
     useEffect(() => {
-    
         const fetchCast = async () => {
                 try {
                     
@@ -83,12 +82,14 @@ export default function MyModal(props) {
 
     //get only the first 10 cast
     const castImages = cast.map( actor => {
-        return (<div key={actor} className='px-2'>
-                    <img className='h-[10rem] w-full rounded-md' src={`${props.image_base_url}${actor.profile_path}`} alt={`${actor.original_name}`} />
-                    <p className='text-center' > {actor.original_name} </p>
+        return (<div key={actor} className='px-2 text-xs sm:text-sm'>
+                    <img className='h-[5rem] w-full rounded-md sm:h-[10rem]' src={`${props.image_base_url}${actor.profile_path}`} alt={`${actor.original_name}`} />
+                    <p className='text-center ' > {actor.original_name} </p>
                     <p className='mb-3 text-center' >({actor.character})</p>
                 </div>)
-    })
+    });
+
+    
     return (
         <Modal
             isOpen={props.modalIsOpen}
