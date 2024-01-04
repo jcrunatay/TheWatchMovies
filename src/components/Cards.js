@@ -10,7 +10,7 @@ export default function Card(props){
                 alt={`${props.original_title}`} 
                 onClick = {()=>{props.openModal();props.fetchMoviesById(props.id);props.playTrailer()}}
                 />
-                <div className="bg-bg-opa70 h-0 w-full px-1 absolute bottom-0 flex items-center justify-end  group-hover:h-7 overflow-hidden transition-all duration-300 sm:px-5">
+                <div className="bg-bg-opa70 h-0 w-full px-1 absolute bottom-0 hidden items-center justify-end  group-hover:h-7 overflow-hidden transition-all duration-300 sm:px-5 lg:flex">
                     {/* play icon */}
                     <button
                         onClick = {()=>{props.openModal();props.fetchMoviesById(props.id);props.playTrailer()}}>
