@@ -8,7 +8,8 @@ module.exports = {
         'bg-opa70': "rgba(0,0,0,0.7)"
       },
       fontFamily : {
-        inter : "'Inter', monospace"
+        inter : "'Inter', sans-serif",
+        poppins : "'Poppins', sans-serif"
       },
       colors : {
         redtheme : "#DA4167",
